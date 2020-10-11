@@ -19,7 +19,7 @@ def constructGraph(words):
 			else:
 				possibilities[label] = [word]
 
-	# connect the vertices that can be swapped
+	# connect the words that can be swapped
 	for collection in possibilities.keys():
 		for wordA in possibilities[collection]:
 			for wordB in possibilities[collection]:

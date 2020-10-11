@@ -13,7 +13,6 @@ class Vertex:
 
     def setPrevious(self, previous):
         self.previous = previous
-
        
     def getPrevious(self):
         return self.previous
