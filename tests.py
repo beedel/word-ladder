@@ -1,24 +1,14 @@
 import unittest
-from bfs import traverse
+from main import main
 
 
-class TestBracketMatching(unittest.TestCase):
+class TestWordLadder(unittest.TestCase):
 
-    def test_bracketMatching(self):
-        self.assertEqual(bracketMatching("()"), True, "() should be true")
-        self.assertEqual(bracketMatching("())"), False, "'())' should be false")  
-        self.assertEqual(bracketMatching("a (dog)"), True, "'a (dog)' should be true")
-        self.assertEqual(bracketMatching("a (dog"), False, "'a (dog' should be false")    
-
-        self.assertEqual(bracketMatching("{}"), True, "{} should be true")
-        self.assertEqual(bracketMatching("{})"), False, "{}) should be false")  
-        self.assertEqual(bracketMatching("a {dog}"), True, "'a {dog}' should be true")
-        self.assertEqual(bracketMatching("a {dog"), False, "'a {dog' should be false")   
-
-        self.assertEqual(bracketMatching("[]"), True, "[] should be true")
-        self.assertEqual(bracketMatching("[])"), False, "[]) should be false")  
-        self.assertEqual(bracketMatching("a [dog]"), True, "'a [dog]' should be true")
-        self.assertEqual(bracketMatching("a [dog"), False, "'a [dog' should be false")     
+    def test_wordLadder(self):
+        self.assertEqual(main("hot,dot,dog,lot,log,arm,cat,man", "hit", "cog"), 5, "from hit to cog should be 5") 
+        self.assertEqual(main("dot,dog,log", "lag", "cog"), 3, "from lag to log should be 3")
+        self.assertEqual(main("came,case,cast", "same", "cost"), 5, "from same to cost should be 5")
+        self.assertEqual(main("cord,card,ward", "cold", "warm"), 5, "from cold to warm should be 5")
 
 if __name__ == "__main__":
     unittest.main()
