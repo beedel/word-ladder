@@ -32,6 +32,7 @@ def constructGraph(words):
 def main(dictionary, from_word, to_word):
 	words = dictionary.split(",")
 
+	# add the start and end word to the dictionary
 	words.append(from_word)
 	words.append(to_word)
 
