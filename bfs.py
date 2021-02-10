@@ -29,6 +29,4 @@ def traverse(final):
 
 	reversed_string = s[::-1]
 
-	# print("->".join(reversed_string) + " (" + str(len(reversed_string)) + ")")
-
 	return len(reversed_string)
